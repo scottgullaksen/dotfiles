@@ -1,22 +1,14 @@
 #!/bin/sh
 
+# TODO: Document what this does
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # merge in defaults and keymaps
-
 if [ -f $sysresources ]; then
-
-
-
-
-
-
-
     xrdb -merge $sysresources
-
 fi
 
 if [ -f $sysmodmap ]; then
@@ -24,15 +16,7 @@ if [ -f $sysmodmap ]; then
 fi
 
 if [ -f "$userresources" ]; then
-
-
-
-
-
-
-
     xrdb -merge "$userresources"
-
 fi
 
 if [ -f "$usermodmap" ]; then
@@ -52,6 +36,9 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 setxkbmap no
+GPG_TTY=$(tty)
+export GPG_TTY  # Fixes issue with gpg not prompting for passphrase 
+export _JAVA_AWT_WM_NONREPARENTING=1 # fixes issues with Intellij
 dwmblocks &
 picom --experimental-backends -b
 exec ~/scripts/startdwm
