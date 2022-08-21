@@ -1,0 +1,10 @@
+[user]
+	email = scott.gullaksen@gmail.com
+	username = scottgullaksen
+	name = Scott Gullaksen
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[pull]
+	rebase = false
