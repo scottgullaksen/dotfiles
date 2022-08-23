@@ -22,7 +22,7 @@ require("mason-lspconfig").setup({
 })
 
 local function make_default_opts() return {
-    on_attach = require("scott.lsp.handlers").on_attach,
+  on_attach = require("scott.lsp.handlers").on_attach,
 	capabilities = require("scott.lsp.handlers").capabilities,
 } end
 
@@ -37,18 +37,18 @@ require("mason-lspconfig").setup_handlers {
     end,
     -- Next, you can provide targeted overrides for specific servers.
     ["jsonls"] = function ()
-        local jsonls_opts = require("scott.lsp.settings.jsonls")
-	 	local opts = vim.tbl_deep_extend("force", jsonls_opts, make_default_opts())
-        require("lspconfig").jsonls.setup(opts)
+      local jsonls_opts = require("scott.lsp.settings.jsonls")
+	 	  local opts = vim.tbl_deep_extend("force", jsonls_opts, make_default_opts())
+      require("lspconfig").jsonls.setup(opts)
     end,
     ["sumneko_lua"] = function ()
-        local sumneko_opts = require("scott.lsp.settings.sumneko_lua")
+      local sumneko_opts = require("scott.lsp.settings.sumneko_lua")
 	    local opts = vim.tbl_deep_extend("force", sumneko_opts, make_default_opts())
-        require("lspconfig").sumneko_lua.setup(opts)
+      require("lspconfig").sumneko_lua.setup(opts)
     end,
     ["pyright"] = function ()
-	 	local pyright_opts = require("scott.lsp.settings.pyright")
-	 	local opts = vim.tbl_deep_extend("force", pyright_opts, make_default_opts())
-        require("lspconfig").pyright.setup(opts)
+	 	  local pyright_opts = require("scott.lsp.settings.pyright")
+	 	  local opts = vim.tbl_deep_extend("force", pyright_opts, make_default_opts())
+      require("lspconfig").pyright.setup(opts)
 	 end
 }
