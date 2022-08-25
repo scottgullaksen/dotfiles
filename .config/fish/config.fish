@@ -23,5 +23,8 @@ fish_vi_key_bindings  # set vi-mode
 set -gx GPG_TTY $(tty)
 set -gx EDITOR nvim
 
+# Configure keybinds for fish fzf plugin
+fzf_configure_bindings --directory=\ct --git_log=\cg --git_status=\cs --processes=\cp
+
 # Init the starship prompt
-starship init fish | source
+# starship init fish | source
