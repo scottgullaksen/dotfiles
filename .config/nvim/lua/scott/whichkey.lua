@@ -48,7 +48,7 @@ local setup =  {
     scroll_up = '<c-u>', -- binding to scroll up inside the popup
   },
   window = {
-    border = "rounded", -- none, single, double, shadow *
+    border = "none", -- none, single, double, shadow *, rounded
     position = "bottom", -- bottom, top
     margin = { 1, 0, 1, 0 }, -- extra window margin [top, right, bottom, left]
     padding = { 2, 2, 2, 2 }, -- extra window padding [top, right, bottom, left]
@@ -95,6 +95,7 @@ local mappings = {
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
+  ["Q"] = { "<cmd>qa!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
@@ -183,3 +184,6 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+
+-- So the layout inherits style from the colorscheme
+vim.cmd('hi WhichKeyFloat ctermbg=BLACK ctermfg=BLACK')
