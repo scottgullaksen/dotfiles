@@ -1,6 +1,8 @@
 -- Look for more configs at https://github.com/kyazdani42/nvim-tree.lua
 -- Also, see :help nvim-tree-setup
 
+-- Defualt mappings can be found in https://github.com/kyazdani42/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
+
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 

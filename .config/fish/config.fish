@@ -14,7 +14,9 @@ abbr -a lt lsd --tree
 
 abbr -a copy xclip -sel clip
 abbr -a cpass lpass show -cp
+abbr -a tmps /home/scottg/scripts/temps
 
+abbr -a passgen "tr -dc A-Za-z0-9 </dev/urandom | head -c"
 
 fish_vi_key_bindings  # set vi-mode
 

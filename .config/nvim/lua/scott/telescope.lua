@@ -2,8 +2,6 @@
 -- Many default keybindings are listed on the readme, which are probably replicated below.
 -- A bunch of cool pickers are also listed there.
 
--- Note that https://github.com/BurntSushi/ripgrep has to be installed for livegrep to work has to be installed for livegrep to work
-
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
   return
@@ -89,7 +87,6 @@ telescope.setup {
     },
   },
   pickers = {
-    -- Built in pickers: https://github.com/nvim-telescope/telescope.nvim#pickers
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
