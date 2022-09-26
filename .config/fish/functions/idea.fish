@@ -1,3 +1,3 @@
 function idea
-	/home/scottg/bin/idea $argv > /dev/null 2>&1 &
+	$HOME/bin/idea $argv &> /dev/null &
 end

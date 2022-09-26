@@ -34,7 +34,14 @@ set -gx GPG_TTY $(tty)
 set -gx EDITOR nvim
 
 # Configure keybinds for fish fzf plugin
-fzf_configure_bindings --directory=\ct --git_log=\cg --git_status=\cs --processes=\cp
+# Note that the shell variables feature is not bound to any keybinding
+fzf_configure_bindings --directory=\ct --git_log=\cg --git_status=\cs --processes=\cp --variables=
+
+# PATH
+fish_add_path $HOME/bin
+
+# Enable zoxide (https://github.com/ajeetdsouza/zoxide) for the fish shell
+zoxide init fish | source
 
 # Init the starship prompt
 # starship init fish | source
