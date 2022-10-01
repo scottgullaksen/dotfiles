@@ -44,7 +44,7 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both ...
   use "numToStr/Comment.nvim"  -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"  -- Required by bufferline
-  use "kyazdani42/nvim-tree.lua"  -- Required by bufferline
+  use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
   use {

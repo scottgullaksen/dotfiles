@@ -44,6 +44,7 @@ M.setup = function()
   })
 end
 
+-- Adds autocmd for highlighting code block under cursor
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
   if client.server_capabilities.document_highlight then
