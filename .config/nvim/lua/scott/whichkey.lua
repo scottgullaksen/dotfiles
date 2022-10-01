@@ -125,6 +125,7 @@ local mappings = {
     R = { require 'gitsigns'.reset_buffer, "Reset Buffer" },
     s = { require 'gitsigns'.stage_hunk, "Stage Hunk" },
     u = { require 'gitsigns'.undo_stage_hunk, "Undo Stage Hunk" },
+    S = { require 'gitsigns'.stage_buffer, "Stage buffer" },
     d = {
       "<cmd>Gitsigns diffthis HEAD<cr>",
       "Diff",
