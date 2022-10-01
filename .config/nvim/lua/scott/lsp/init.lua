@@ -6,3 +6,4 @@ end
 require("scott.lsp.mason-lsp-installer")
 require("scott.lsp.mason-lspconfig-setup")
 require("scott.lsp.handlers").setup()
+require("scott.lsp.null-ls")

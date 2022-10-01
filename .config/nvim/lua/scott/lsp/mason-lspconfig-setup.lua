@@ -9,7 +9,19 @@ end
 require("mason-lspconfig").setup({
     -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "sumneko_lua" }
     -- This setting has no relation with the `automatic_installation` setting.
-    ensure_installed = {},
+  ensure_installed = {
+    "sumneko_lua",
+    "jedi_language_server",
+    "clangd",
+    "volar",
+    "awk_ls",
+    "dockerls",
+    "kotlin_language_server",
+    "html",
+    "sqlls",
+    "cssls",
+    "yamlls"
+  },
 
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
     -- This setting has no relation with the `ensure_installed` setting.
@@ -46,9 +58,36 @@ require("mason-lspconfig").setup_handlers {
 	    local opts = vim.tbl_deep_extend("force", sumneko_opts, make_default_opts())
       require("lspconfig").sumneko_lua.setup(opts)
     end,
-    ["pyright"] = function ()
-	 	  local pyright_opts = require("scott.lsp.settings.pyright")
-	 	  local opts = vim.tbl_deep_extend("force", pyright_opts, make_default_opts())
-      require("lspconfig").pyright.setup(opts)
-	 end
+    ["jedi_language_server"] = function ()
+      require("lspconfig").jedi_language_server.setup(make_default_opts())
+	 end,
+    ["clangd"] = function ()
+      require("lspconfig").clangd.setup(make_default_opts())
+	 end,
+    ["volar"] = function ()
+      local volar_opts = require("scott.lsp.settings.volar")
+	    local opts = vim.tbl_deep_extend("force", volar_opts, make_default_opts())
+      require("lspconfig").volar.setup(opts)
+	 end,
+    ["awk_ls"] = function ()
+      require("lspconfig").awk_ls.setup(make_default_opts())
+	  end,
+    ["dockerls"] = function ()
+      require("lspconfig").dockerls.setup(make_default_opts())
+	  end,
+    ["kotlin_language_server"] = function ()
+      require("lspconfig").kotlin_language_server.setup(make_default_opts())
+	  end,
+    ["html"] = function ()
+      require("lspconfig").html.setup(make_default_opts())
+	  end,
+    ["cssls"] = function ()
+      require("lspconfig").cssls.setup(make_default_opts())
+	  end,
+    ["sqlls"] = function ()
+      require("lspconfig").sqlls.setup(make_default_opts())
+	  end,
+    ["yamlls"] = function ()
+      require("lspconfig").yamlls.setup(make_default_opts())
+	  end
 }
