@@ -94,6 +94,7 @@ local mappings = {
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["W"] = { "<cmd>wqa!<CR>", "Save & Quit all" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["Q"] = { "<cmd>qa!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
