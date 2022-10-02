@@ -117,6 +117,7 @@ cmp.setup {
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "path" },
+    { name = "buffer" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
