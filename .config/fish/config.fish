@@ -27,6 +27,8 @@ abbr -a tmps /home/scottg/scripts/temps
 
 abbr -a passgen "tr -dc A-Za-z0-9 </dev/urandom | head -c"
 
+abbr -a bt bluetoothctl
+
 fish_vi_key_bindings  # set vi-mode
 
 # Environment variables (global + exported)
