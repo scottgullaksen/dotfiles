@@ -35,10 +35,9 @@ fi
 [ -f /etx/xprofile ] && . /etc/profile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
-setxkbmap no
-GPG_TTY=$(tty)
-export GPG_TTY  # Fixes issue with gpg not prompting for passphrase 
-export _JAVA_AWT_WM_NONREPARENTING=1 # fixes issues with Intellij
-dwmblocks &
-picom --experimental-backends -b
-exec ~/scripts/startdwm
+# Here startdwm is kept as default
+session=${1}
+case $session in
+    # No known session, try to run it as command
+    *      ) exec ~/scripts/startdwm;;
+esac
