@@ -30,6 +30,9 @@ abbr ua-update-all 'set -gx TMPFILE (mktemp); \
       && yay -Syyu --noconfirm'
 
 fish_vi_key_bindings  # set vi-mode
+# Custom keybinds
+# fix this - overrides something
+# bind \er __select_from_last
 
 # Environment variables (global + exported)
 set -gx GPG_TTY $(tty)

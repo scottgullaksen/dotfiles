@@ -21,8 +21,6 @@
 # "/" is NOT optional when followed by a *
 !.config/
 .config/*
-!.config/nvim/
-.config/nvim/plugin/
 !.config/picom.conf
 !.config/kitty/
 !.config/omf/
