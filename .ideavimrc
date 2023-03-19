@@ -10,6 +10,11 @@ set easymotion
 set ideajoin
 set idearefactormode=keep
 
+""" Use systemclipboard as register
+set clipboard+=unnamed
+
+set commentary
+
 """ Set <leader> to space
 let mapleader = " "
 
@@ -18,10 +23,11 @@ noremap <Esc> <nop>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-nnoremap <C-j> :m +1<CR>
-nnoremap <C-k> :m -2<CR>
-inoremap <C-j> <Esc>:m +1<CR>gi
-inoremap <C-k> <Esc>:m -2<CR>gi
+" These move lines up and down. Remap
+"nnoremap <C-j> :m +1<CR>
+"nnoremap <C-k> :m -2<CR>
+"inoremap <C-j> <Esc>:m +1<CR>gi
+"inoremap <C-k> <Esc>:m -2<CR>gi
 
 " system clipboard
 vmap <leader>y "+y
@@ -39,15 +45,32 @@ vmap <leader>d <C-d>
 vmap <leader>u <C-u>
 
 " actions
-nmap <leader>h <action>(PreviousTab)
-nmap <leader>l <action>(NextTab)
-nmap <leader>bd <action>(CloseEditor)
+nmap <leader><S-j> <action>(PreviousTab)
+nmap <leader><S-k> <action>(NextTab)
+nmap <leader>c <action>(CloseEditor)
 nmap <leader>i <action>(Generate)
 nmap <leader>m <action>(Git.Menu)
-nmap <leader>s <action>(QuickChangeScheme)
 nmap <leader>/ <action>(ShowErrorDescription)
-nmap <leader>e <action>(GotoNextError)
+nmap <leader>e <action>(ActivateProjectToolWindow)
+nmap <leader>r <action>(RenameElement)
 nnoremap <leader><leader> <C-Tab>
+
+nmap <leader>fu <action>(FindUsages)
+nmap <leader>ff <action>(GotoFiles)
+nmap <leader>sf <action>(GotoFiles)
+nmap <leader><cr> <action>(Run)
+
+" Window management/navigation
+" Remember to set <C-j> and <C-k> as handled by ideavim in intellij settings
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+" not working
+"nnoremap <C-k> <action>(PreviousTab)
+"nnoremap <C-j> <action>(NextTab)
+"inoremap <C-k> <action>(PreviousTab)
+"inoremap <C-j> <action>(NextTab)
 
 set NERDTree
 let g:NERDTreeMapActivateNode='l'
