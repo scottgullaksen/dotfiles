@@ -1,19 +1,14 @@
 " Taken from https://github.com/sdaschner/dotfiles/blob/master/.ideavimrc
 " which is referred to by https://www.youtube.com/watch?v=SDiKLLrUZMI
 
-""" Ideavim plugins
 set number relativenumber
+set idearefactormode=keep
+set ideajoin
 set surround
 set easymotion
 
-""" Idea specific settings
-set ideajoin
-set idearefactormode=keep
-
-""" Set <leader> to space
 let mapleader = " "
 
-""" Mappings
 noremap <Esc> <nop>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
