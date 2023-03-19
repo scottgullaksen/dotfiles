@@ -35,3 +35,11 @@
   lg = !"git lg1"whitespace = red reverse
 [pull]
 	ff = only
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[init]
+	defaultBranch = main

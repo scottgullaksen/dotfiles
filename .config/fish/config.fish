@@ -22,12 +22,12 @@ abbr -a bt bluetoothctl
 
 alias ua-drop-caches 'sudo paccache -rk3; yay -Sc --aur --noconfirm'
 abbr ua-update-all 'set -gx TMPFILE (mktemp); \
-    sudo true; \
-    rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
-      && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
-      && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
-      && ua-drop-caches \
-      && yay -Syyu --noconfirm'
+sudo true; \
+rate-mirrors --save=$TMPFILE arch --max-delay=21600 \
+  && sudo mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist-backup \
+  && sudo mv $TMPFILE /etc/pacman.d/mirrorlist \
+  && ua-drop-caches \
+  && yay -Syyu --noconfirm'
 
 fish_vi_key_bindings  # set vi-mode
 # Custom keybinds
