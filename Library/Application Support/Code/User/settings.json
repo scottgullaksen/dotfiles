@@ -1,0 +1,153 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 13,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "vscode-icons",
+
+  // -------vim settings---------
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.highlightedyank.enable": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "r", "e"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["<leader>", "r", "f"],
+      "commands": ["fileutils.renameFile"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    },
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.action.splitEditor"]
+    },
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["revealInExplorer"]
+    },
+    // Add new keybind for actions assosciated with cmd+w (NOT WORKING)
+    {
+      "before": ["leader", "c"],
+      "commands": ["workbench.action.closeWindow"],
+      "when": "!editorIsOpen && !multipleEditorGroups"
+    },
+    {
+      "before": ["leader", "c"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["leader", "c"],
+      "commands": ["workbench.action.closeGroup"],
+      "when": "activeEditorGroupEmpty && multipleEditorGroups"
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // Bind £ to goto previous whole word under cursor
+    {
+      "before": ["£"],
+      "after": ["#"]
+    },
+    {
+      "before": [":"],
+      "commands": ["workbench.action.showCommands"],
+      "silent": true
+    },
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.showNextWindowTab"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.showPreviousWindowTab"]
+    },
+    {
+      "key": "ctrl+h",
+      "command": "workbench.action.focusLeftGroup",
+      "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    },
+    {
+      "key": "ctrl+l",
+      "command": "workbench.action.focusRightGroup",
+      "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+    }
+  ],
+  // Pending mode = char after pressing y
+  "vim.operatorPendingModeKeyBindings": [
+    // E.g. yL becomes same as y$, but only if y is pressed
+    {
+      "before": ["L"],
+      "after": ["$"]
+    },
+    {
+      "before": ["H"],
+      "after": ["^"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "commands": ["ditor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["ditor.action.outdentLines"]
+    }
+  ],
+  // E.g. y( becomes a shortcut for yi(
+  "vim.operatorPendingModeKeyBindingsNonRecursive": [
+    {
+      "before": ["("],
+      "after": ["i("]
+    }
+  ],
+  "vim.leader": "<space>",
+  // Define which keys vimplugin should (not) handle
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    "<C-j>": false,
+    "<C-k>": false,
+    "<C-h>": false,
+    "<C-l>": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "window.zoomLevel": 1
+}

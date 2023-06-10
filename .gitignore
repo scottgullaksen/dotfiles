@@ -1,0 +1,58 @@
+# Blocklist files/folders in same directory as the .gitignore file
+/*
+
+# Includelist some standard files
+!.gitignore
+!README.md
+
+# Include some files
+!.gitconfig
+!.xinitrc
+!.bashrc
+!.fehbg
+!.profile
+!.ideavimrc
+!.amethyst.yml
+!.bash_profile
+!.zshrc
+
+# Ignore all files named .DS_Store or ending with .log
+**/.DS_Store
+**.log
+
+# Includelist folder/a/b1/ and folder/a/b2/
+# trailing "/" is optional for folders, may match file though.
+# "/" is NOT optional when followed by a *
+!.config/
+.config/*
+!.config/picom.conf
+!.config/kitty/
+!.config/omf/
+!.config/fish/
+.config/fish/*
+!.config/fish/config.fish
+!.config/fish/functions/
+.config/fish/functions/*
+!.config/fish/functions/idea.fish
+!.config/fish/functions/gpr.fish
+!.config/gh/
+.config/gh/*
+!.config/gh/config.yml
+!.config/karabiner/
+.config/karabiner/*
+!.config/karabiner/karabiner.json
+!.config/.ssh/
+.config/.ssh/*
+!.config/.ssh/config
+
+!/Library/
+/Library/*
+!/Library/Application Support/
+/Library/Application Support/*
+!/Library/Application Support/Code/
+/Library/Application Support/Code/*
+!/Library/Application Support/Code/User/
+/Library/Application Support/Code/User/*
+!/Library/Application Support/Code/User/settings.json
+!/Library/Application Support/Code/User/keybindings.json
+
