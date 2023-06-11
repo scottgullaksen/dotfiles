@@ -30,7 +30,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/usr/local/bin/kitty -d $HOME"
+                    "shell_command": "/opt/homebrew/bin/kitty -d $HOME"
                   }
                 ]
               }
@@ -49,7 +49,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "/usr/local/bin/kitty -T floating -d $HOME"
+                    "shell_command": "/opt/homebrew/bin/kitty -T floating -d $HOME"
                   }
                 ]
               }

@@ -2,7 +2,7 @@
 	email = scott.gullaksen@gjensidige.no
 	username = scottgullaksen
 	name = Scott Gullaksen
-	signingkey = /Users/Scott.Gullaksen@gjensidige.no/.ssh/id_ed25519.pub
+	signingkey = ~/.ssh/id_ed25519.pub
 [diff]
 	tool = nvimdiff
 [merge]

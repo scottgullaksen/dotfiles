@@ -25,6 +25,7 @@ fish_vi_key_bindings  # set vi-mode
 
 # Environment variables (global + exported)
 set -gx EDITOR nvim
+set -gx SHELL fish
 
 # Configure keybinds for fish fzf plugin
 # Note that the shell variables feature is not bound to any keybinding
@@ -33,8 +34,9 @@ fzf_configure_bindings --directory=\ct --git_log=\cg --git_status=\cs --processe
 # PATH
 fish_add_path $HOME/bin
 fish_add_path /usr/local/bin
+fish_add_path /opt/homebrew/bin
 
 # Enable zoxide (https://github.com/ajeetdsouza/zoxide) for the fish shell
-# zoxide init fish | source
+zoxide init fish | source
 
-kubectl completion fish | source
+# kubectl completion fish | source
